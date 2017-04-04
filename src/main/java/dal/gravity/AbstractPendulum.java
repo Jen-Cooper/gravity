@@ -11,7 +11,7 @@ public abstract class AbstractPendulum implements GravityModel{
      */
     private double stringLength, pointMass;
     protected double theta0; 
-    protected double g; 
+    protected static double g; 
 
     /**
      * Creates a new Pendulum instance using
@@ -45,6 +45,9 @@ public abstract class AbstractPendulum implements GravityModel{
 
     public double getGravitationalField () { return g; }
     
-
+    public void setGravity(double gravity)
+    {
+    	this.g = gravity;
+    }
 
 }
