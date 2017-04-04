@@ -14,10 +14,12 @@ public class PendulumRunner {
 
 	double delta = (args.length == 0) ? .1 : Double.parseDouble (args[0]);
 	double sLen = 10, pMass = 10, theta0 = Math.PI/30;
+	
 	RegularPendulum rp = new RegularPendulum (sLen, pMass, theta0, delta);
 	SimplePendulum sp = new SimplePendulum (sLen, pMass, theta0);
 	RegularPendulum rpCoarse = 
 	    new RegularPendulum (sLen, pMass, theta0, .1);
+	
 
 	// print out difference in displacement in 1 second intervals
 	// for 20 seconds
@@ -32,7 +34,7 @@ public class PendulumRunner {
 				nf.format (Math.toDegrees (rp.getLastTheta ()))
 				+ "\t" + 
 				nf.format (Math.toDegrees (rpCoarse.getLastTheta ())));
-	}
+	}//end for 	
     }
 }
 

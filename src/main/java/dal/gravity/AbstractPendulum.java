@@ -3,7 +3,7 @@ package dal.gravity;
 /**
  * Represents a pendulum
  */
-public abstract class AbstractPendulum {
+public abstract class AbstractPendulum implements GravityModel{
 
 
     /* instance variables - string length, point mass, angular displacement
@@ -44,5 +44,7 @@ public abstract class AbstractPendulum {
     public double getStringLength () { return stringLength; }
 
     public double getGravitationalField () { return g; }
+    
+
 
 }
